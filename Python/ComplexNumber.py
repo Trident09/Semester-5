@@ -22,5 +22,3 @@ subtraction = complex_subtraction(num1, num2)
 # Print the results
 print("Addition is:", addition)
 print("Subtraction is:", subtraction)
-
-a = complex(input("kjsgksh"))
