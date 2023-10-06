@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Form Showcase</title>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+			}
+			.form-container {
+				justify-content: center;
+				align-items: center;
+				width: 50vw;
+				margin: 0 auto;
+				padding: 20px;
+				background-color: #f8f8f8;
+				border-radius: 5px;
+			}
+			.form-container label {
+				display: block;
+				margin-bottom: 10px;
+			}
+			.form-container input[type="text"],
+			.form-container input[type="email"],
+			.form-container input[type="password"],
+			.form-container select {
+				width: 90%;
+				padding: 10px;
+				margin-bottom: 20px;
+				border: 1px solid #ddd;
+				border-radius: 5px;
+			}
+			.form-container input[type="submit"] {
+				width: 200px;
+				padding: 10px 20px;
+				background-color: #007bff;
+				color: #fff;
+				border: none;
+				border-radius: 5px;
+				cursor: pointer;
+			}
+			.form-container input[type="submit"]:hover {
+				background-color: #0056b3;
+			}
+			.check {
+				display: flex;
+				width: 100%;
+				align-items: center;
+                justify-content: center;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="form-container">
+			<h1 style="text-align: center">Form Showcase</h1>
+			<form>
+				<label for="fname">First name:</label>
+				<input
+					type="text"
+					id="fname"
+					name="fname"
+					value="John"
+				/>
+				<label for="lname">Last name:</label>
+				<input
+					type="text"
+					id="lname"
+					name="lname"
+					value="Doe"
+				/>
+				<label for="email">Email:</label>
+				<input
+					type="email"
+					id="email"
+					name="email"
+					value=""
+				/>
+				<label for="password">Password:</label>
+				<input
+					type="password"
+					id="password"
+					name="password"
+					value=""
+				/>
+				<label for="country">Country:</label>
+				<select
+					id="country"
+					name="country"
+				>
+					<option value="usa">USA</option>
+					<option value="canada">Canada</option>
+					<option value="mexico">Mexico</option>
+				</select>
+				<div class="check">
+					<input
+						type="checkbox"
+						id="terms"
+						name="terms"
+						value="agree"
+					/>
+					<label for="terms"
+						>I agree to the terms and conditions</label
+					>
+				</div>
+				<input
+					type="submit"
+					value="Submit"
+				/>
+			</form>
+		</div>
+	</body>
+</html>
