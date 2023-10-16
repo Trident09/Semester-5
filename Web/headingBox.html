@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			html,
+			body {
+				background: #e4e2f2;
+				width: 100%;
+				min-height: 100vh;
+			}
+
+			h1 {
+				font-family: "Rig Bold Face", sans-serif;
+				text-transform: uppercase;
+				font-size: 18vw;
+				text-align: center;
+				font-weight: normal;
+				margin: 0;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				position: absolute;
+				color: #91d4ff;
+			}
+			h1:before,
+			h1:after,
+			h1 span:before,
+			h1 span:after {
+				content: attr(data-heading);
+				position: absolute;
+				overflow: hidden;
+				left: 0;
+				top: 0;
+				width: 100%;
+				z-index: 5;
+				font-weight: normal;
+				text-shadow: none;
+			}
+			h1:before {
+				color: #fff;
+				font-family: "Rig Bold Inline", sans-serif;
+			}
+			h1:after {
+				font-family: "Rig Bold Coarse", sans-serif;
+				color: #040351;
+			}
+
+			span::before {
+				font-family: "Rig Bold Shadow", sans-serif;
+				color: #cbc7e3;
+				z-index: -1;
+			}
+			span::after {
+				font-family: "Rig Bold Extrude", sans-serif;
+				color: #4d8bea;
+				z-index: -1;
+			}
+
+			@font-face {
+				font-family: "Rig Bold Coarse";
+				src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/Rig-BoldCoarse.otf");
+			}
+			@font-face {
+				font-family: "Rig Bold Extrude";
+				src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/Rig-BoldExtrude.otf");
+			}
+			@font-face {
+				font-family: "Rig Bold Shadow";
+				src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/Rig-BoldShadow.otf");
+			}
+			@font-face {
+				font-family: "Rig Bold Face";
+				src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/Rig-BoldFace.otf");
+			}
+			@font-face {
+				font-family: "Rig Bold Inline";
+				src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/Rig-BoldInline.otf");
+			}
+
+			/* Additional styles for screen size section */
+			.screen-size-section {
+				font-family: "Times New Roman", Times, serif;
+				margin-top: 100vh;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 100vh;
+			}
+
+			.screen-size-container {
+				background-color: #ffffff;
+				padding: 20px;
+				margin: 20px;
+				border-radius: 10px;
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			}
+			#outer {
+				font-size: 25px;
+			}
+			#inner {
+				font-size: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 data-heading="Heading">
+			<span
+				contenteditable
+				data-heading="Heading"
+				>Heading</span
+			>
+		</h1>
+
+		<div class="screen-size-section">
+			<div class="screen-size-container">
+				<h2>Box within Box</h2>
+				<p id="outer">Outside Box</p>
+				<div
+					style="
+						background-color: #f2f2f2;
+						padding: 20px;
+						margin: 20px;
+					"
+				>
+					<p id="inner">Inner Box</p>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			var span = document.querySelector("span");
+
+			span.addEventListener("input", function () {
+				var text = this.innerText;
+				this.setAttribute("data-heading", text);
+				this.parentElement.setAttribute("data-heading", text);
+			});
+		</script>
+	</body>
+</html>
