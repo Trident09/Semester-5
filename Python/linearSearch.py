@@ -1,15 +1,15 @@
-def linear_search(arr, target):
+def linear_search(arr, search):
    for index, item in enumerate(arr):
-       if item == target:
+       if item == search:
            return index
    return -1
 
-arr = list(map(int, input("Enter array elements separated by space: ").split()))
-target = int(input("Enter the target value: "))
+arr = list(map(int, input("Enter elements with space between them: ").split()))
+search = int(input("Enter the SEARCH value: "))
 
-index = linear_search(arr, target)
+index = linear_search(arr, search)
 
 if index != -1:
-   print(f"'{target}' found at index {index}.")
+   print(f"'{search}' found at index {index}.")
 else:
-   print(f"'{target}' not found in the list.")
+   print(f"'{search}' not found in the list.")
