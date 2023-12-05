@@ -1,6 +1,5 @@
-Python
+# Python
 
-'''
 datatype \
 operators \
 inputs \
@@ -27,4 +26,3 @@ find cgpa from 8sem sgpa \
 grade of student \
 check if ap \
 check if gp \
-'''
