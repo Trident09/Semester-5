@@ -1,0 +1,50 @@
+body{
+    background: rgb(34,193,195);
+    background: url("https://images.unsplash.com/photo-1575761410364-8a3eb7e4edfc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXwyMzZ8fGVufDB8fHx8fA%3D%3D");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin:0;
+    font-family: 'Poppins', sans-serif; 
+ }
+ 
+ #form{
+    width:400px;
+    margin:20vh auto 0 auto;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    padding:30px;
+ }
+ 
+ h1{
+    text-align: center;
+    color:#792099;
+ }
+ 
+ #form button{
+    background-color: #792099;
+    color:white;
+    border: 1px solid #792099;
+    border-radius: 5px;
+    padding:10px;
+    margin:20px 0px;
+    cursor:pointer;
+    font-size:20px;
+    width:100%;
+ }
+ 
+ .input-group{
+    display:flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+ }
+ 
+ .input-group input{
+    border-radius: 5px;
+    font-size:20px;
+    margin-top:5px;
+    padding:10px;
+    border:1px solid rgb(34,193,195) ;
+ }
+ 

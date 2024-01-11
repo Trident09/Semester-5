@@ -1,0 +1,30 @@
+/* Styles for the table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid black;
+  }
+  
+  th {
+    background-color: #792099;
+    color: #fff;
+    text-align: left;
+    padding: 10px;
+    border: 1px solid black;
+  }
+  
+  td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    border: 1px solid black;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  img {
+    width: 100px;
+    height: auto;
+  }
+  
